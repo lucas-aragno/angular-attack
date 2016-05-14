@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: 'app/templates/input.html'
 })
 
-export class InputComponent {
+export class InputComponent implements OnInit {
   @Input() input = 'tetris';
   @Output() inputChanged = new EventEmitter();
 
@@ -17,4 +17,16 @@ export class InputComponent {
       query
     })
   }
+
+  ngOnInit() {
+    /*if (annyang) {
+      console.log('====== LOADING ANNYANG =====');
+      let commands = {
+        '*search': this.search
+      };
+      annyang.addCommands(commands);
+      annyang.start();
+    }*/
+  }
+
 }

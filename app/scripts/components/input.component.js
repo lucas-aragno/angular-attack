@@ -30,6 +30,16 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                         query: query
                     });
                 };
+                InputComponent.prototype.ngOnInit = function () {
+                    /*if (annyang) {
+                      console.log('====== LOADING ANNYANG =====');
+                      let commands = {
+                        '*search': this.search
+                      };
+                      annyang.addCommands(commands);
+                      annyang.start();
+                    }*/
+                };
                 __decorate([
                     core_1.Input(), 
                     __metadata('design:type', Object)

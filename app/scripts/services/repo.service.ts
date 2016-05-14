@@ -1,9 +1,6 @@
 import { RepoComponent } from '../components/repo.component';
-import { REPOS } from '../constants/list.data.constant';
-
 import { Injectable } from '@angular/core';
 import axios from 'axios';
-
 
 @Injectable()
 export class ListService {

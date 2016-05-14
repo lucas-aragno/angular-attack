@@ -2,6 +2,7 @@
 
   var map = {
     'app':                        'app/scripts', // 'dist',
+    'vendor':                     'app/vendor',
     'rxjs':                       'node_modules/rxjs',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     '@angular':                   'node_modules/@angular',
@@ -10,6 +11,7 @@
 
   var packages = {
     'app':                        { main: 'boot.js',  defaultExtension: 'js' },
+    'vendor':                     { main: 'annyang.js' },
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { defaultExtension: 'js' },
     'axios':                      { main: 'axios' }
