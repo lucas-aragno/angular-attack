@@ -1,4 +1,4 @@
-System.register(['@angular/platform-browser-dynamic', './list.component'], function(exports_1, context_1) {
+System.register(['@angular/platform-browser-dynamic', './components/list.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var platform_browser_dynamic_1, list_component_1;

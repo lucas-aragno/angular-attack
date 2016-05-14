@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Repo } from './repo.component';
 import { RepoComponent } from './repo.component';
 
 @Component({
   selector: 'sp-list',
-  templateUrl: './templates/list.html',
+  template: '<h1> for now </h1>',
+  //templateUrl: './templates/list.html',
   directives: [ RepoComponent ]
 })
 
