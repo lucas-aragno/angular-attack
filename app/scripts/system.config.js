@@ -5,16 +5,14 @@
     'rxjs':                       'node_modules/rxjs',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     '@angular':                   'node_modules/@angular',
-    'axios':                      'node_modules/axios/dist',
-    'annyang':                    'node_modules/annyang'
+    'axios':                      'node_modules/axios/dist'
   };
 
   var packages = {
     'app':                        { main: 'boot.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { defaultExtension: 'js' },
-    'axios':                      { main: 'seeeaxios' },
-    'annyang':                    { main: 'culocacapito.min.js' }
+    'axios':                      { main: 'axios' }
   };
 
   var packageNames = [
