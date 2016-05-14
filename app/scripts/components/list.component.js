@@ -29,8 +29,8 @@ System.register(['@angular/core', './repo.component', '../services/repo.service'
                     this.listService = listService;
                 }
                 ListComponent.prototype.getRepoList = function () {
-                    this.repos = this.listService.getRepos('test');
-                    //(/ repos => this.repos = repos);
+                    var _this = this;
+                    this.listService.getRepos('test').then(function (res) { return _this.repos = res.data.items; });
                 };
                 ListComponent.prototype.ngOnInit = function () {
                     this.getRepoList();

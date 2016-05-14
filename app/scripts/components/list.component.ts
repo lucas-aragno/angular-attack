@@ -14,8 +14,9 @@ export class ListComponent implements OnInit {
   constructor(private listService : ListService) {}
 
   getRepoList() {
-    this.repos = this.listService.getRepos('test')
-    //(/ repos => this.repos = repos);
+    this.listService.getRepos('test').then(
+     res => this.repos = res.data.items
+    )
   }
 
   ngOnInit() {

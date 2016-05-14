@@ -9,7 +9,7 @@ import axios from 'axios';
 export class ListService {
 
   getRepos(query) {
-    //return axios.get('https://api.github.com/search/repositories?q=tetris+language:assembly&sort=stars&order=desc');
-    return [{name: 'test', url: 'otro test'}]
+    let url = "https://api.github.com/search/repositories?q=tetris+language:assembly&sort=stars&order=desc";
+    return axios.get(url);
   }
 }

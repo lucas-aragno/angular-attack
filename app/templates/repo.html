@@ -1,20 +1,3 @@
 <div class="repo">
-  <a href="{{repo.url}}" class="repo__link">{{repo.name}}</a>
-  <span class="repo__button-wrapper">
-    <button class="repo__button" (click)="submitted=true" [hidden]="submitted">
-      Edit
-    </button>
-    <button class="repo__button" (click)="onDelete(repo)">Delete</button>
-  </span>
-  <div class="repo__form-wrapper" [hidden]="!submitted">
-    <form class="repo__form" (ngSubmit)="onSubmit()">
-      <label class="repo__form__label">Name: </label>
-      <input class="repo__form__input" [(ngModel)]="repo.name"
-        placeholder="Name"/>
-      <label class="repo__form__label">URL: </label>
-      <input class="repo__form__input" [(ngModel)]="repo.url"
-        placeholder="URL"/>
-      <button class="repo__form__button" type="submit">Done</button>
-    </form>
-  </div>
+  <a href="{{repo.url}}" target="_blank" class="repo__link">{{repo.name}}</a>
 </div>

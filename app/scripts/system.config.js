@@ -5,14 +5,14 @@
     'rxjs':                       'node_modules/rxjs',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     '@angular':                   'node_modules/@angular',
-    'axios':                      'node_modules/axios'
+    'axios':                      'node_modules/axios/dist'
   };
 
   var packages = {
     'app':                        { main: 'boot.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { defaultExtension: 'js' },
-    'axios':                      { main: 'axios.ts' }
+    'axios':                      { main: 'axios' }
   };
 
   var packageNames = [
