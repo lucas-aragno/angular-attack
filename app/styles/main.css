@@ -1,0 +1,48 @@
+@import "http://fonts.googleapis.com/css?family=Montserrat:300,400,700";
+
+.list-title {
+  text-align: center;
+}
+
+.repos {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.repos a {
+  position: relative;
+  display: block;
+  padding: 7px 10px;
+  font-size: 0.9em;
+  border-top: 1px solid #DDD;
+  text-decoration: none;
+  color: #444;
+  font-size: 0.9em;
+}
+
+.repos .repo-name {
+  max-width: 280px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+}
+
+.repos .repo-issues {
+  display: block;
+  font-size: 0.75em;
+  font-style: italic;
+  color: #777;
+}
+
+.repos .repo-stars {
+  position: absolute;
+  font-size: 0.9em;
+  right: 0.5em;
+  top: 1.1em;
+  color: #888;
+}
+
+.repos .repo-stars::after {
+  content: '\a0\2605';
+  font-size: 1.1em;
+  font-weight: bold;
+}

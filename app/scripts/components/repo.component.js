@@ -22,7 +22,9 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 function RepoComponent() {
                     this.repo = {
                         name: 'Angus',
-                        url: 'github.com/moove-it/Angus'
+                        html_url: 'github.com/moove-it/Angus',
+                        stargazers_count: 0,
+                        open_issues: 0
                     };
                 }
                 RepoComponent = __decorate([

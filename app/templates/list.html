@@ -1,7 +1,8 @@
-<section class="repolist-container repolist-container--blue-dark">
-  <ul class="repolist__sublist">
-    <li *ngFor="let repo of repos; let i = index">
-      <sp-repo [repo]="repo"></sp-repo>
-    </li>
-  </ul>
-</section>
+<div class="list-title">
+  <h1> Repos List </h1>
+</div>
+<div class="repos">
+  <div *ngFor="let repo of repos; let i = index">
+    <sp-repo [repo]="repo"></sp-repo>
+  </div>
+</div>
