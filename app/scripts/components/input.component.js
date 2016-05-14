@@ -20,25 +20,25 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         execute: function() {
             InputComponent = (function () {
                 function InputComponent() {
-                    this.input = 'tetris';
+                    this.input = '';
                     this.inputChanged = new core_1.EventEmitter();
                 }
                 InputComponent.prototype.search = function (query) {
-                    console.warn('query: ', query);
                     this.input = query;
                     this.inputChanged.emit({
                         query: query
                     });
                 };
                 InputComponent.prototype.ngOnInit = function () {
-                    /*if (annyang) {
-                      console.log('====== LOADING ANNYANG =====');
-                      let commands = {
-                        '*search': this.search
-                      };
-                      annyang.addCommands(commands);
-                      annyang.start();
-                    }*/
+                    console.log(annyang);
+                    if (annyang) {
+                        console.log('====== LOADING ANNYANG =====');
+                        var commands = {
+                            '*search': this.search.bind(this)
+                        };
+                        annyang.addCommands(commands);
+                        annyang.start();
+                    }
                 };
                 __decorate([
                     core_1.Input(), 

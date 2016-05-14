@@ -1,17 +1,15 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
-
 @Component({
   selector: 'sp-input',
   templateUrl: 'app/templates/input.html'
 })
 
 export class InputComponent implements OnInit {
-  @Input() input = 'tetris';
+  @Input() input = '';
   @Output() inputChanged = new EventEmitter();
 
   search(query) {
-    console.warn('query: ', query )
     this.input = query;
     this.inputChanged.emit({
       query
@@ -19,14 +17,14 @@ export class InputComponent implements OnInit {
   }
 
   ngOnInit() {
-    /*if (annyang) {
+    console.log(annyang);
+    if (annyang) {
       console.log('====== LOADING ANNYANG =====');
       let commands = {
-        '*search': this.search
+        '*search': this.search.bind(this)
       };
       annyang.addCommands(commands);
       annyang.start();
-    }*/
+    }
   }
-
 }
