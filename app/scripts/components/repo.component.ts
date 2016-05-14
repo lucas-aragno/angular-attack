@@ -8,7 +8,8 @@ interface Repo {
 
 @Component({
   selector: 'sp-repo',
-  templateUrl: 'app/templates/repo.html'
+  templateUrl: 'app/templates/repo.html',
+  inputs: ['repo']
 })
 
 export class RepoComponent {

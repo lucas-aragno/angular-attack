@@ -11,32 +11,28 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var RepoComponent;
+    var ListService;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            RepoComponent = (function () {
-                function RepoComponent() {
-                    this.repo = {
-                        name: 'Angus',
-                        url: 'github.com/moove-it/Angus'
-                    };
+            ListService = (function () {
+                function ListService() {
                 }
-                RepoComponent = __decorate([
-                    core_1.Component({
-                        selector: 'sp-repo',
-                        templateUrl: 'app/templates/repo.html',
-                        inputs: ['repo']
-                    }), 
+                ListService.prototype.getRepos = function (query) {
+                    //return axios.get('https://api.github.com/search/repositories?q=tetris+language:assembly&sort=stars&order=desc');
+                    return [{ name: 'test', url: 'otro test' }];
+                };
+                ListService = __decorate([
+                    core_1.Injectable(), 
                     __metadata('design:paramtypes', [])
-                ], RepoComponent);
-                return RepoComponent;
+                ], ListService);
+                return ListService;
             }());
-            exports_1("RepoComponent", RepoComponent);
+            exports_1("ListService", ListService);
         }
     }
 });
-//# sourceMappingURL=repo.component.js.map
+//# sourceMappingURL=repo.service.js.map

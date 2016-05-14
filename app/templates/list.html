@@ -1,0 +1,7 @@
+<section class="repolist-container repolist-container--blue-dark">
+  <ul class="repolist__sublist">
+    <li *ngFor="let repo of repos; let i = index">
+      <sp-bookmark [repo]="repo"></sp-bookmark>
+    </li>
+  </ul>
+</section>
