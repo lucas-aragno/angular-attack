@@ -1,4 +1,4 @@
-System.register(['@angular/core', './repo.component', '../services/repo.service'], function(exports_1, context_1) {
+System.register(['@angular/core', './repo.component', './input.component', '../services/repo.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', './repo.component', '../services/repo.service'
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, repo_component_1, repo_service_1;
+    var core_1, repo_component_1, input_component_1, repo_service_1;
     var ListComponent;
     return {
         setters:[
@@ -20,6 +20,9 @@ System.register(['@angular/core', './repo.component', '../services/repo.service'
             function (repo_component_1_1) {
                 repo_component_1 = repo_component_1_1;
             },
+            function (input_component_1_1) {
+                input_component_1 = input_component_1_1;
+            },
             function (repo_service_1_1) {
                 repo_service_1 = repo_service_1_1;
             }],
@@ -28,18 +31,21 @@ System.register(['@angular/core', './repo.component', '../services/repo.service'
                 function ListComponent(listService) {
                     this.listService = listService;
                 }
-                ListComponent.prototype.getRepoList = function () {
+                ListComponent.prototype.getRepoList = function (input) {
                     var _this = this;
-                    this.listService.getRepos('test').then(function (res) { return _this.repos = res.data.items; });
+                    this.listService.getRepos(input).then(function (res) { return _this.repos = res.data.items; });
+                };
+                ListComponent.prototype.valueChanged = function (event) {
+                    this.getRepoList(event.query);
                 };
                 ListComponent.prototype.ngOnInit = function () {
-                    this.getRepoList();
+                    this.getRepoList('tetris');
                 };
                 ListComponent = __decorate([
                     core_1.Component({
                         selector: 'sp-list',
                         templateUrl: 'app/templates/list.html',
-                        directives: [repo_component_1.RepoComponent],
+                        directives: [repo_component_1.RepoComponent, input_component_1.InputComponent],
                         providers: [repo_service_1.ListService]
                     }), 
                     __metadata('design:paramtypes', [repo_service_1.ListService])

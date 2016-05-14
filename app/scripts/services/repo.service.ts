@@ -9,7 +9,8 @@ import axios from 'axios';
 export class ListService {
 
   getRepos(query) {
-    let url = "https://api.github.com/search/repositories?q=tetris+language:assembly&sort=stars&order=desc";
+    let cleanQuery = query.split(' ').join('+');
+    let url = `https://api.github.com/search/repositories?q=${cleanQuery}&sort=stars`;
     return axios.get(url);
   }
 }

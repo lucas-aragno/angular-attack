@@ -1,5 +1,7 @@
 <div class="list-title">
-  <h1> Repos List </h1>
+  <h1> Top stared repo list </h1>
+  <sp-input (inputChanged)="valueChanged($event)"></sp-input>
+  <div class="disc"> we support voice-based search too <i class="em em-grin"></i></div>
 </div>
 <div class="repos">
   <div *ngFor="let repo of repos; let i = index">
