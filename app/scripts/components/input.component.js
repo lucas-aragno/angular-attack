@@ -20,21 +20,23 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         execute: function() {
             InputComponent = (function () {
                 function InputComponent() {
-                    this.input = '';
+                    this.input = 'tetris';
                     this.inputChanged = new core_1.EventEmitter();
+                    this.input = 'tetris';
                 }
                 InputComponent.prototype.search = function (query) {
-                    this.input = query;
                     this.inputChanged.emit({
                         query: query
                     });
+                    this.input = query;
+                    // hack b/c im tired
+                    document.querySelector("button").click();
                 };
                 InputComponent.prototype.ngOnInit = function () {
-                    console.log(annyang);
+                    var searchAction = this.search.bind(this);
                     if (annyang) {
-                        console.log('====== LOADING ANNYANG =====');
                         var commands = {
-                            '*search': this.search.bind(this)
+                            '*search': searchAction
                         };
                         annyang.addCommands(commands);
                         annyang.start();

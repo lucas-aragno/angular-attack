@@ -25,7 +25,6 @@ System.register(['@angular/core', 'axios'], function(exports_1, context_1) {
                 function ListService() {
                 }
                 ListService.prototype.getRepos = function (query) {
-                    console.warn('QUERY HERE: ', query);
                     var cleanQuery = query.split(' ').join('+');
                     var url = "https://api.github.com/search/repositories?q=" + cleanQuery + "&sort=stars";
                     return axios_1.default.get(url);

@@ -6,25 +6,30 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class InputComponent implements OnInit {
-  @Input() input = '';
+  @Input() input = 'tetris';
   @Output() inputChanged = new EventEmitter();
 
   search(query) {
-    this.input = query;
     this.inputChanged.emit({
       query
     })
+    this.input = query;
+    // hack b/c im tired
+    document.querySelector("button").click()
   }
 
   ngOnInit() {
-    console.log(annyang);
+    let searchAction = this.search.bind(this);
     if (annyang) {
-      console.log('====== LOADING ANNYANG =====');
       let commands = {
-        '*search': this.search.bind(this)
+        '*search': searchAction
       };
       annyang.addCommands(commands);
       annyang.start();
     }
+  }
+
+  constructor() {
+   this.input = 'tetris';
   }
 }
